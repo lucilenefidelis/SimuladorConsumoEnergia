@@ -58,8 +58,8 @@ private void pegarResolucao(){
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnUm = new javax.swing.JButton();
+        btnDois = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -84,13 +84,18 @@ private void pegarResolucao(){
         jLabel2.setForeground(new java.awt.Color(0, 0, 255));
         jLabel2.setText("Simulador de Consumo");
 
-        jButton1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 51, 204));
-        jButton1.setText("01");
+        btnUm.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        btnUm.setForeground(new java.awt.Color(0, 51, 204));
+        btnUm.setText("01");
+        btnUm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUmActionPerformed(evt);
+            }
+        });
 
-        jButton2.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 51, 204));
-        jButton2.setText("02");
+        btnDois.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        btnDois.setForeground(new java.awt.Color(0, 51, 204));
+        btnDois.setText("02");
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel3.setText("Apartamentos");
@@ -111,9 +116,9 @@ private void pegarResolucao(){
                         .addGap(92, 92, 92)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(btnUm)
                                 .addGap(105, 105, 105)
-                                .addComponent(jButton2))
+                                .addComponent(btnDois))
                             .addComponent(jLabel1))))
                 .addContainerGap(64, Short.MAX_VALUE))
         );
@@ -128,8 +133,8 @@ private void pegarResolucao(){
                 .addComponent(jLabel3)
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(btnDois)
+                    .addComponent(btnUm))
                 .addContainerGap(104, Short.MAX_VALUE))
         );
 
@@ -150,6 +155,12 @@ private void pegarResolucao(){
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnUmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUmActionPerformed
+        Ambiente obj = new Ambiente();
+        jdpPrincipal.add(obj);
+        obj.setVisible(true);
+    }//GEN-LAST:event_btnUmActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,8 +201,8 @@ private void pegarResolucao(){
     private TelaDeFundo TelaDeFundo = new TelaDeFundo();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnDois;
+    private javax.swing.JButton btnUm;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

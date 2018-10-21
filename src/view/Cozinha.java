@@ -9,12 +9,12 @@ package view;
  *
  * @author Luh Joyce
  */
-public class Principal1 extends javax.swing.JPanel {
+public class Cozinha extends javax.swing.JPanel {
 
     /**
-     * Creates new form Principal1
+     * Creates new form Cozinha
      */
-    public Principal1() {
+    public Cozinha() {
         initComponents();
     }
 
