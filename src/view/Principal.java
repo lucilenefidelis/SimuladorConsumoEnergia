@@ -96,6 +96,11 @@ private void pegarResolucao(){
         btnDois.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         btnDois.setForeground(new java.awt.Color(0, 51, 204));
         btnDois.setText("02");
+        btnDois.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDoisActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel3.setText("Apartamentos");
@@ -157,10 +162,19 @@ private void pegarResolucao(){
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUmActionPerformed
+        System.out.println("Ta funcionando!");
         Ambiente obj = new Ambiente();
         jdpPrincipal.add(obj);
         obj.setVisible(true);
     }//GEN-LAST:event_btnUmActionPerformed
+
+    private void btnDoisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoisActionPerformed
+       System.out.println("Ta funcionando!");
+        Ambiente obj = new Ambiente();
+        jdpPrincipal.add(obj);
+        obj.setVisible(true);
+        
+    }//GEN-LAST:event_btnDoisActionPerformed
 
     /**
      * @param args the command line arguments

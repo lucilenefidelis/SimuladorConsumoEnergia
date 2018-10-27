@@ -9,7 +9,7 @@ package view;
  *
  * @author Luh Joyce
  */
-public class Ambiente extends javax.swing.JPanel {
+public class Ambiente extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Principal1
